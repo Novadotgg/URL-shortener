@@ -36,7 +36,7 @@ exit();
 
 $orig_url=$_POST['input_url'];
 $rand=substr(md5(microtime()), rand(0,26),3);
-mysqli_query($conn,"insert into 'short_url_data'('orig_url','unique_exten') values('orig_url','')") 
+mysqli_query($conn,"insert into 'short_url_data'('orig_url','unique_exten') values('orig_url','')"); 
 
 
 echo "localhost/a?"."$rand";
