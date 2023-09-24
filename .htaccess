@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ project.php?code=$1 [L,QSA]
+
+#RewriteEngine on
+
+
+
+#RewriteEngine ON
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^([a-zA-Z0-9-_]{7})/?$ project.php?shortened=$1 [L]
+#RewriteEngine On
+
+# Redirect shortened URLs to the PHP script
+#RewriteRule ^([a-zA-Z0-9]+)$ ./project.php?code=$1 [QSA,L]
+
+#RewriteRule ^(\w+)$ ./project.php?code=$1
