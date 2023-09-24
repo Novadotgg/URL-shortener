@@ -4,8 +4,8 @@
     <title>URL Shortener</title>
 </head>
 <body>
-   <center> 
-    <h1>URL Shortener project</h1>
+<center>
+    <h1>URL Shortener</h1>
     <?php
 
     $db_host = 'localhost';
@@ -25,7 +25,7 @@
     function generateShortCode() {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $short_code = '';
-        $length = 6; // Change the length as needed
+        $length = 6; 
 
         for ($i = 0; $i < $length; $i++) {
             $short_code .= $characters[rand(0, strlen($characters) - 1)];
@@ -53,7 +53,7 @@
         $existing_short_url = getExistingShortURL($original_url, $conn);
 
         if ($existing_short_url) {
-            echo "<p>Shortened URL: <a href='$existing_short_url'>$existing_short_url</a></p>";
+            echo "<p>Shortened URL: <a href='http://$existing_short_url'>$existing_short_url</a></p>";
         } else {
             $short_code = generateShortCode();
 
@@ -61,7 +61,7 @@
 
             if ($conn->query($sql) === TRUE) {
                 $shortened_url = $_SERVER['HTTP_HOST'] . '/' . $short_code;
-                echo "<p>Shortened URL: <a href='$shortened_url'>$shortened_url</a></p>";
+                echo "<p>Shortened URL: <a href='http://$shortened_url'>$shortened_url</a></p>";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
@@ -87,10 +87,13 @@
     $conn->close();
     ?>
 
-    <form method="POST" action="">
+
+<form method="POST" action="">
         <input type="url" name="original_url"required style="width:500px;padding:10px;font-size:1.5em;"placeholder="Enter URL to shorten" required>
         <input type="submit" name="submit" value="Shorten">
-    </form>
+
+
+
 </center>
 </body>
 </html>
