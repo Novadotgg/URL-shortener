@@ -31,8 +31,9 @@ run `sudo apt install phpmyadmin`
 ## Database:
 Set up the username and password for the phpmyadmin. Open the database and create table with id, original_url and short_code. or type `mysql -uroot -p`<br>
 Enter the password and write query:<br>
-`CREATE DATABASE url_shortener; <br>
-USE url_shortener; <br>
-CREATE TABLE urls ( id INT AUTO_INCREMENT PRIMARY KEY, original_url VARCHAR(255) NOT NULL, short_code VARCHAR(10) NOT NULL );`
+> CREATE DATABASE url_shortener; 
+> USE url_shortener; 
+> CREATE TABLE urls ( id INT AUTO_INCREMENT PRIMARY KEY, original_url VARCHAR(255) NOT NULL, short_code VARCHAR(10) NOT NULL );
 ### Connection to the database:
+
 
