@@ -183,16 +183,21 @@ and change `AllowOverride none` to `AllowOverride All` in `<Directory /var/www/>
 ~~~
 <br>
 Write the rules to the .htaccess file
-The .htasscess file with written rule: <br>
+The .htasscess file with written rule: 
+
 ~~~
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ project.php?code=$1 [L,QSA]
 ~~~
+
 Now restart the Apache server...
 Now save all the files in ` /var/www/html ` 
-and go to browser type `127.0.0.1/filename.php` and hit enter
+and go to browser type `127.0.0.1/filename.php` and hit `enter`.
+Enter the Long URL and click shorten <br>
+You will be given a corresponding short URL on the main page. <br>
+When you click the short URL, you will be redirected to the original URL link...
 
 
 
