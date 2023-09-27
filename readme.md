@@ -1,4 +1,4 @@
-This is a project to shorten the URL.
+# This is a project to shorten the URL.
 ### The following will guide you to get used to my URL shortener...
 Welcome to the URL-shortener wiki! This is a site created in PHP that will shorten the given long URL to a URL with a fewer alphanumeric characters randomly with a fixed size and while clicked will redirect to the original site... I did this using lamp stack. So let's get started:
 
@@ -10,7 +10,7 @@ Before that: run sudo apt update
 then run sudo apt install apache2
 During installation, Apache registers itself with UFW to provide a few application profiles that can be used to enable or disable access to Apache through the firewall. List the ufw application profiles by typing:sudo ufw app list
 You will receive a list of the application profiles. It is recommended that you enable the most restrictive profile that will still allow the traffic you’ve configured. Since we haven’t configured SSL for our server yet in this guide, we will only need to allow traffic on port 80:
-run sudo ufw allow 'Apache'
+run `sudo ufw allow 'Apache'`
 
 
 Install mysql server:
