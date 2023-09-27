@@ -10,7 +10,6 @@ Before that: <br>run
 ~~~
 sudo apt update
 ~~~
-<br>
 then run 
 ~~~
 sudo apt install apache2
