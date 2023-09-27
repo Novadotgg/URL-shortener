@@ -14,20 +14,21 @@ run `sudo ufw allow 'Apache'`
 
 
 Install mysql server:
-run sudo apt install mysql-server
-then you can start the mysql services by running sudo systemctl start mysql.service
+run `sudo apt install mysql-server`
+then you can start the mysql services by running `sudo systemctl start mysql.service`
 
 
 Instal PHP:
-run sudo apt install php8.2
+run `sudo apt install php8.2`
 or better do:
-run sudo apt install php libapache2-mod-php php-mysql
+run `sudo apt install php libapache2-mod-php php-mysql`
 This will install the following 3 packages php - installs PHP, libapache2-mod-php - Used by apache to handle PHP files, php-mysql - PHP module that allows PHP to connect to MySQL
 
 Add PHPmyadmin for the database:
-run sudo apt install phpmyadmin
+run `sudo apt install phpmyadmin`
 
 
 Database:
-Set up the username and password for the phpmyadmin. Open the database and create table with id, original_url and short_code. or type mysql -uroot -p Enter the password and write query:
-CREATE DATABASE url_shortener; USE url_shortener; CREATE TABLE urls ( id INT AUTO_INCREMENT PRIMARY KEY, original_url VARCHAR(255) NOT NULL, short_code VARCHAR(10) NOT NULL );
+Set up the username and password for the phpmyadmin. Open the database and create table with id, original_url and short_code. or type `mysql -uroot -p`<br>
+Enter the password and write query:
+`CREATE DATABASE url_shortener;<br> USE url_shortener; <br> CREATE TABLE urls ( id INT AUTO_INCREMENT PRIMARY KEY, original_url VARCHAR(255) NOT NULL, short_code VARCHAR(10) NOT NULL );`
