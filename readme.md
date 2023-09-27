@@ -169,9 +169,30 @@ Therefore the PHP script ends here using :
 $conn->close();
 ~~~
 ## .htaccess:
-
-
-
+.htaccess file can be used to manipulate behaviour of the site...
+There are certain rules that can be written on .htaccess file as per requirement...
+For that: <br>
+go to `/etc/apache2/apache2.conf` <br>
+and change `AllowOverride none` to `AllowOverride All` in `<Directory /var/www/>` in the `apache2.conf` file.
+~~~
+<Directory /var/www/>
+	Options Indexes FollowSymLinks
+	AllowOverride All
+	Require all granted
+</Directory>
+~~~
+<br>
+Write the rules to the .htaccess file
+The .htasscess file with written rule: <br>
+~~~
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ project.php?code=$1 [L,QSA]
+~~~
+Now restart the Apache server...
+Now save all the files in ` /var/www/html ` 
+and go to browser type `127.0.0.1/filename.php` and hit enter
 
 
 
