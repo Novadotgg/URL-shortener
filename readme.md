@@ -14,7 +14,7 @@ then run
 ~~~
 sudo apt install apache2
 ~~~
-During installation, Apache registers itself with UFW to provide a few application profiles that can be used to enable or disable access to Apache through the firewall. List the ufw application profiles by typing:sudo ufw app list
+During installation, Apache registers itself with UFW to provide a few application profiles that can be used to enable or disable access to Apache through the firewall. List the ufw application profiles by typing: ` sudo ufw app list` <br>
 You will receive a list of the application profiles. It is recommended that you enable the most restrictive profile that will still allow the traffic you’ve configured. Since we haven’t configured SSL for our server yet in this guide, we will only need to allow traffic on port 80:<br>
 run 
 ~~~
