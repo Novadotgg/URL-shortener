@@ -10,7 +10,7 @@
 
     $db_host = 'localhost';
     $db_user = 'root';
-    $db_pass = 'Shanks0p';
+    $db_pass = '';
     $db_name = 'url_shortener';
 
 
